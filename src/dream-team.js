@@ -9,6 +9,6 @@ module.exports = function createDreamTeam(members) {
       secretName.push(element);
     }
   });
-  secretName = secretName.map(e => e.toLowerCase()).sort();
-  return secretName.toString().split(',').join('').toUpperCase();
+  secretName = secretName.map(e => e.toUpperCase()).sort().toString().split(',').join('');
+  return secretName;
 };
