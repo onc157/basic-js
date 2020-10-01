@@ -8,8 +8,8 @@ module.exports = function dateSample(sampleActivity) {
     (+sampleActivity === sampleActivity) ||
     (typeof sampleActivity === 'object') ||
     (sampleActivity < 0) ||
-    (+sampleActivity > 15) ) return false;
+    (+sampleActivity > MODERN_ACTIVITY) ) return false;
   let result = 0;
-  result = (Math.log(15 / sampleActivity)) / (0.693 / 5730);
+  result = (Math.log(MODERN_ACTIVITY / sampleActivity)) / (0.693 / HALF_LIFE_PERIOD);
   return Math.ceil(result);
 };
